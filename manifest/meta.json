@@ -1,0 +1,14 @@
+{
+    "name": "Sui",
+    "slug": "sui",
+    "author": {
+        "name": "jeroenpardon",
+        "link": "https://github.com/jeroenpardon/sui/"
+    },
+    "preview": "preview.png",
+    "features": [
+        "date",
+        "links",
+        "search bar"
+    ]
+}

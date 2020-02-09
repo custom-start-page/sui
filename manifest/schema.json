@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "apps": {
+      "type": "array",
+      "title": "Apps",
+      "description": "Links to online apps",
+      "items": {
+        "type": "object",
+        "title": "App",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Name of the website you're linking to"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "Link to the website"
+          },
+          "icon": {
+            "type": "string",
+            "title": "Icon",
+            "description": "Icon to display, you can check out available icons at: https://iconify.design/icon-sets/mdi/"
+          }
+        }
+      }
+    },
+    "bookmarks": {
+      "type": "array",
+      "title": "Bookmark Group",
+      "description": "Create links grouped by category",
+      "items": {
+        "type": "object",
+        "title": "Link Group",
+        "required": [
+          "category"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "title": "Category",
+            "description": "Give this a category a name"
+          },
+          "links": {
+            "type": "array",
+            "title": "Links",
+            "items": {
+              "type": "object",
+              "title": "Link",
+              "description": "A sigle link to a website which belongs in the parent group",
+              "required": [
+                "name",
+                "url"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Name",
+                  "description": "Name of the website you're linking to"
+                },
+                "url": {
+                  "type": "string",
+                  "title": "URL",
+                  "description": "Link with 'http://' to the website"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
